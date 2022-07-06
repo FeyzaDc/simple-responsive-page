@@ -1,0 +1,180 @@
+$button: #8cc011;
+$bg: #333;
+$title-bg: rgba(3, 3, 3, 0.418);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 7px;
+    letter-spacing: .5px;
+}
+
+body {
+    font-family: "Montserrat";
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: $bg;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    height: 25rem;
+
+    .bg-img {
+        background-image: url(../images/bg.png);
+        width: 100%;
+        height: 25rem;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    h1 {
+        padding: 6rem;
+        padding-bottom: 0;
+        text-shadow: rgba(0, 0, 0) 0px 10px 20px, rgba(0, 0, 0) 0px 6px 6px;
+        ;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: $button;
+        border-radius: 20px;
+        padding: 1rem 2rem;
+        margin-top: 3rem;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+        transition: all 0.3s;
+    }
+
+    .btn:hover {
+        background-color: $bg;
+        color: white;
+    }
+
+}
+
+#section-a {
+    padding: 2.2rem 0;
+    background-color: $title-bg;
+
+}
+
+#section-b {
+    padding: 2rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 1.5rem;
+            background-color: $bg;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+
+            .col-content {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+#section-c {
+    background-color: $title-bg;
+    padding: 5rem;
+}
+
+#section-d {
+
+    .box {
+        padding: 5rem;
+
+        &:first-child {
+            background-color: $button;
+        }
+
+        a {
+            color: white;
+        }
+    }
+}
+
+footer {
+    padding: 4rem;
+    background: white;
+    color: black;
+
+    a {
+        color: $button;
+    }
+}
+
+@media screen and (min-width:600px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    #section-b {
+        li {
+            width: 30%;
+            margin: 1%;
+            display: inline-block;
+        }
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:599px) {
+
+    #section-b {
+        li {
+            
+            .col {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+
+                img {
+                    width: 60%;
+                    height: auto;                
+                }
+            }
+        }
+    }
+}
